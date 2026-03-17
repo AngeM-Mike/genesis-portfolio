@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genesis Digit — Junior Entreprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="genesis.css" />
+</head>
+<body>
+
+  <!-- CURSEUR PERSONNALISÉ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══ NAVIGATION ══ -->
+  <nav id="navbar">
+    <a class="nav-brand" href="#">
+      <!--
+        LOGO : remplace "logo.png" par le chemin de ton fichier logo.
+        Si introuvable, le fallback "GD" violet s'affiche automatiquement.
+      -->
+      <img src="Genesis logo 2 copie.png" alt="Genesis Digit" class="nav-logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+      <div class="nav-logo-fallback"><span>GD</span></div>
+      <span class="nav-brand-name">Genesis Digit</span>
+
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Projets</a></li>
+      <li><a href="#team">Équipe</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Nous contacter →</a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+
+  <!-- ══════════════════════════════
+       HERO — Accroche principale
+       Ce que le visiteur voit en premier.
+  ══════════════════════════════ -->
+  <section id="hero">
+    <!-- Fond décoratif : cercles flous, aucun trait -->
+    <div class="hero-bg">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Junior Entreprise · Abidjan, Côte d'Ivoire</p>
+        <h1 class="hero-title">
+          Nous donnons vie<br>
+          à votre <em>présence</em><br>
+          digitale.
+        </h1>
+        <p class="hero-desc">
+          Sites web, identités visuelles, design UI — des créations soignées pour les entreprises locales qui veulent se démarquer.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">Voir nos projets</a>
+          <a href="#services" class="btn-ghost">
+            Nos services
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cartes flottantes : aperçu des 3 services clés -->
+      <div class="hero-cards">
+        <div class="hcard">
+          <div class="hcard-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M7 8h2M11 8h6M7 11h10"/></svg>
+          </div>
+          <span class="hcard-label">Sites web</span>
+          <span class="hcard-num">01</span>
+        </div>
+        <div class="hcard offset">
+          <div class="hcard-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <span class="hcard-label">Affiches & Logos & Identité</span>
+          <span class="hcard-num">02</span>
+        </div>
+        <div class="hcard offset2">
+          <div class="hcard-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h4M12 18h.01"/></svg>
+          </div>
+          <span class="hcard-label">UI/UX Design</span>
+          <span class="hcard-num">03</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       SERVICES — Nos 4 prestations
+  ══════════════════════════════ -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow"><span class="eyebrow-bar"></span>Ce que nous proposons</div>
+        <h2 class="section-title">Des services <em>sur mesure</em></h2>
+        <p class="section-sub">Adaptés aux besoins réels des petites entreprises ivoiriennes qui veulent exister en ligne.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="scard reveal" style="--d:.05s">
+          <div class="scard-top"><span class="scard-num">01</span><span class="scard-badge">Web</span></div>
+          <h3 class="scard-name">Création de site web</h3>
+          <p class="scard-desc">Sites vitrines, catalogues en ligne et PWA. Hébergés sur GitHub Pages — accessibles sans frais d'hébergement.</p>
+          
+        </div>
+        <div class="scard reveal" style="--d:.15s">
+          <div class="scard-top"><span class="scard-num">02</span><span class="scard-badge">Graphisme</span></div>
+          <h3 class="scard-name">Design d'affiches</h3>
+          <p class="scard-desc">Affiches événementielles, promotionnelles et publicitaires avec un rendu professionnel et accrocheur pour vos communications.</p>
+          
+        </div>
+        <div class="scard reveal" style="--d:.25s">
+          <div class="scard-top"><span class="scard-num">03</span><span class="scard-badge">Design</span></div>
+          <h3 class="scard-name">UI/UX Design</h3>
+          <p class="scard-desc">Maquettes et prototypes d'applications mobiles ou web. Des interfaces pensées pour vos utilisateurs avant le développement.</p>
+          
+        </div>
+        <div class="scard reveal" style="--d:.35s">
+          <div class="scard-top"><span class="scard-num">04</span><span class="scard-badge">Branding</span></div>
+          <h3 class="scard-name">Identité visuelle</h3>
+          <p class="scard-desc">Logos, chartes graphiques et éléments de branding cohérents qui reflètent l'âme et les valeurs de votre entreprise.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       PROJETS — Galerie portfolio
+       Cliquez sur un projet pour l'agrandir (lightbox).
+
+       POUR AJOUTER VOS IMAGES :
+       Dans chaque .work-item, décommentez la ligne <img src="...">
+       et remplacez le nom de fichier par votre vraie image.
+       Placez vos fichiers dans le même dossier que index.html.
+  ══════════════════════════════ -->
+  <section id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow"><span class="eyebrow-bar"></span>Nos réalisations</div>
+        <h2 class="section-title">Projets <em>récents</em></h2>
+        <p class="section-sub">Un aperçu de nos créations. Cliquez sur un projet pour l'agrandir.</p>
+      </div>
+
+      <div class="work-grid reveal">
+
+        <!-- Affiche 1 — grande (8 colonnes) -->
+        <div class="work-item wi-large" data-label="Affiche 1" data-cat="Design graphique">
+          <div class="work-media">
+            <img src="affiche JUS AND VIBE.jpg" alt="Affiche 1">
+            <div class="work-ph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9l4-4 4 4 4-6 4 6"/><circle cx="8.5" cy="6.5" r="1.5"/></svg>
+              <span>Affiche 1</span>
+              <small>→ affiche1.jpg</small>
+            </div>
+          </div>
+          <div class="work-overlay">
+            <span class="work-cat">Design graphique</span>
+            <span class="work-name">Affiche 1</span>
+          </div>
+          <button class="work-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+        </div>
+
+        <!-- Affiche 2 -->
+        <div class="work-item" data-label="Affiche 2" data-cat="Design graphique">
+          <div class="work-media">
+            <img src="affiche midnight.jpg" alt="Affiche 2">
+            <div class="work-ph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9l4-4 4 4 4-6 4 6"/><circle cx="8.5" cy="6.5" r="1.5"/></svg>
+              <span>Affiche 2</span>
+              <small>→ affiche2.jpg</small>
+            </div>
+          </div>
+          <div class="work-overlay">
+            <span class="work-cat">Design graphique</span>
+            <span class="work-name">Affiche 2</span>
+          </div>
+          <button class="work-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+        </div>
+
+        <!-- Affiche 3 -->
+        <div class="work-item" data-label="Affiche 3" data-cat="Design graphique">
+          <div class="work-media">
+            <img src="affiche URBAN VIBES FESTIVAL.jpg" alt="Affiche 3">
+            <div class="work-ph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9l4-4 4 4 4-6 4 6"/><circle cx="8.5" cy="6.5" r="1.5"/></svg>
+              <span>Affiche 3</span>
+              <small>→ affiche3.jpg</small>
+            </div>
+          </div>
+          <div class="work-overlay">
+            <span class="work-cat">Design graphique</span>
+            <span class="work-name">Affiche 3</span>
+          </div>
+          <button class="work-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+        </div>
+
+        <!-- Site web — grande (7 colonnes) -->
+        <div class="work-item wi-medium" data-label="Site web" data-cat="Développement web">
+          <div class="work-media">
+            <img src="siteexemple.png" alt="Site web">
+            <div class="work-ph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M7 8h2M11 8h6M7 11h10"/></svg>
+              <span>Site web</span>
+              <small>→ site-web.jpg</small>
+            </div>
+          </div>
+          <div class="work-overlay">
+            <span class="work-cat">Développement web</span>
+            <span class="work-name">Site web réalisé</span>
+          </div>
+          <button class="work-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+        </div>
+
+        <!-- Maquette UI -->
+        <div class="work-item" data-label="Maquette UI/UX" data-cat="UI/UX Design">
+          <div class="work-media">
+            <img src="maquetteapp.png" alt="Maquette UI">
+            <div class="work-ph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01M9 7h6M9 11h4"/></svg>
+              <span>Maquette UI/UX</span>
+              <small>→ maquette-ui.jpg</small>
+            </div>
+          </div>
+          <div class="work-overlay">
+            <span class="work-cat">UI/UX Design</span>
+            <span class="work-name">Maquette application</span>
+          </div>
+          <button class="work-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+        </div>
+
+        <!-- Logo 1 -->
+        <div class="work-item" data-label="Logo 1" data-cat="Identité visuelle">
+          <div class="work-media">
+            <img src="Genesis Digit.png" alt="Logo 1">
+            <div class="work-ph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Logo 1</span>
+              <small>→ logo1.jpg</small>
+            </div>
+          </div>
+          <div class="work-overlay">
+            <span class="work-cat">Identité visuelle</span>
+            <span class="work-name">Logo 1</span>
+          </div>
+          <button class="work-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+        </div>
+
+        <!-- Logo 2 -->
+        <div class="work-item" data-label="Logo 2" data-cat="Identité visuelle">
+          <div class="work-media">
+            <img src="logo Water 5 copie.png" alt="Logo 2">
+            <div class="work-ph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Logo 2</span>
+              <small>→ logo2.jpg</small>
+            </div>
+          </div>
+          <div class="work-overlay">
+            <span class="work-cat">Identité visuelle</span>
+            <span class="work-name">Logo 2</span>
+          </div>
+          <button class="work-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       ÉQUIPE — Les deux co-fondateurs
+       MODIFIE pour chaque membre :
+       · src="photo-membreX.jpg" → ta vraie photo
+       · "Prénom NOM" → vos vrais noms
+       · La bio (2-3 phrases)
+       · Les liens href GitHub / LinkedIn / Email
+  ══════════════════════════════ -->
+  <section id="team">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow"><span class="eyebrow-bar"></span>Qui sommes-nous</div>
+        <h2 class="section-title">L'équipe <em>Genesis Digit</em></h2>
+        <p class="section-sub">Deux étudiants en 1ère année Ingénieur STIC, passionnés de design et de technologie.</p>
+      </div>
+
+      <div class="team-grid reveal">
+
+        <!-- ── MEMBRE 1 ── -->
+        <div class="tcard">
+          <div class="tcard-photo-wrap">
+            <!--
+              ✏️ PHOTO : remplace "photo-membre1.jpg" par ton vrai fichier.
+              Format idéal : portrait carré ou 4:3, JPG ou PNG, min 400px.
+              Si le fichier est absent, une silhouette s'affiche.
+            -->
+            <img src="photo-membre1.jpg" alt="Co-fondateur 1" class="tcard-photo"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="tcard-photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+          </div>
+          <div class="tcard-body">
+            <!-- ✏️ Remplace par ton prénom et nom -->
+            <h3 class="tcard-name">Ange Michel NEBIE</h3>
+            <!-- ✏️ Ton rôle dans l'équipe -->
+            <p class="tcard-role">Co-fondateur · Développement Web · Design & Graphisme</p>
+            <!-- ✏️ Ta bio courte (2-3 phrases max) -->
+            <p class="tcard-bio">Étudiant en 1ère année Ingénieur STIC. Spécialisé en identité visuelle et design d'interfaces, j'interviens également sur la création de sites web et la conception graphique.</p>
+            <div class="tcard-links">
+              <!-- ✏️ Remplace # par ton URL GitHub -->
+              <a href="https://github.com/AngeM-Mike" class="tcard-link" aria-label="GitHub" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <!-- ✏️ Remplace # par ton URL LinkedIn -->
+              <a href="https://www.linkedin.com/in/ange-michel-nebie-094111384/" class="tcard-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <!-- ✏️ Remplace par ton vrai email -->
+              <a href="https://mail.google.com/mail/?view=cm&to=angemichel.nebie@gmail.com" class="tcard-link" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── MEMBRE 2 ── -->
+        <div class="tcard">
+          <div class="tcard-photo-wrap">
+            <!--
+              ✏️ PHOTO : remplace "photo-membre2.jpg" par le fichier de ton associé.
+            -->
+            <img src="photo-membre2.jpg" alt="Co-fondateur 2" class="tcard-photo"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="tcard-photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+          </div>
+          <div class="tcard-body">
+            <!-- ✏️ Prénom et nom de ton associé -->
+            <h3 class="tcard-name">Yann Emmanuel MOKE</h3>
+            <!-- ✏️ Son rôle -->
+            <p class="tcard-role">Co-fondateur · Développement Web · Design & Graphisme</p>
+            <!-- ✏️ Sa bio -->
+            <p class="tcard-bio">Étudiant en 1ère année Ingénieur STIC. Passionné par le développement web, je m'occupe aussi bien de la conception de sites que du design d'affiches, de logos et de maquettes UI.</p>
+            <div class="tcard-links">
+              <a href="https://github.com/YannemMOKE" class="tcard-link" aria-label="GitHub" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="https://mail.google.com/mail/?view=cm&to=yannemmanuelmoke@gmail.com" class="tcard-link" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bloc formation -->
+      <div class="formation reveal">
+        <div class="formation-badge">STIC</div>
+        <div>
+          <p class="formation-label">Notre formation</p>
+          <p class="formation-value">1ère Année Ingénieur • Sciences et Technologies de l'Information et de la Communication • Institut National Polytechnique Félix Houphouët-Boigny (INP-HB)</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       CONTACT
+       MODIFIE :
+       · Lien WhatsApp : wa.me/225XXXXXXXXX (numéro sans le +)
+       · Email : contact@genesisdigit.ci
+  ══════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap reveal">
+
+        <div class="contact-left">
+          <div class="eyebrow"><span class="eyebrow-bar"></span>Travaillons ensemble</div>
+          <h2 class="section-title">Un projet<br>en <em>tête ?</em></h2>
+          <p class="contact-desc">Écrivez-nous, nous répondons rapidement. Que ce soit pour un site web, une affiche ou un logo — nous sommes disponibles.</p>
+          <div class="contact-btns">
+            <!-- ✏️ Remplace 2250000000000 par votre vrai numéro WhatsApp -->
+            <a href="https://wa.me/2250584615424" class="btn-primary" target="_blank" rel="noopener">WhatsApp</a>
+            <!-- ✏️ Votre vrai email -->
+            <a href="https://mail.google.com/mail/?view=cm&to=angemichel.nebie@gmail.com" class="btn-ghost">
+              Email
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="cc-row">
+            <p class="cc-label">Basés à</p>
+            <p class="cc-val">Yamoussoukro, Côte d'Ivoire</p>
+          </div>
+          <div class="cc-sep"></div>
+          <div class="cc-row">
+            <p class="cc-label">Délai de réponse</p>
+            <p class="cc-val">Sous 24h</p>
+          </div>
+          <div class="cc-sep"></div>
+          <div class="cc-row">
+            <p class="cc-label">Tarifs</p>
+            <p class="cc-val">Accessibles & transparents</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-gd">GD</span>
+        <span>Genesis Digit · Junior Entreprise</span>
+      </div>
+      <p class="footer-copy">© 2026 Genesis Digit. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+
+  <!-- LIGHTBOX : s'ouvre au clic sur un projet -->
+  <div class="lightbox" id="lightbox">
+    <div class="lb-bg" id="lbBg"></div>
+    <div class="lb-box">
+      <button class="lb-close" id="lbClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <img id="lbImg" src="" alt="" />
+      <div class="lb-ph" id="lbPh"></div>
+      <div class="lb-info">
+        <span class="lb-cat" id="lbCat"></span>
+        <span class="lb-name" id="lbName"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="genesis.js"></script>
+</body>
+</html>
